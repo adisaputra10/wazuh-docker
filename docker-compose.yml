@@ -49,12 +49,12 @@ services:
       - cluster.name=wazuh
       - network.host=0.0.0.0
       - bootstrap.memory_lock=true
-      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+      - "ES_JAVA_OPTS=-Xms4g -Xmx4g"
     ulimits:
       memlock:
         soft: -1
         hard: -1
-    mem_limit: 2g
+    mem_limit: 12g
 #    volumes:
 #      - my-path:/usr/share/elasticsearch/data:Z
     networks:
